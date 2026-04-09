@@ -1,0 +1,109 @@
+----Directions----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 46.48250699792053 mm
+Protocol #2 Error (P-MPJPE): 34.671330666901106 mm
+Protocol #3 Error (N-MPJPE): 43.94440005986019 mm
+Velocity Error (MPJVE): 3.0618781625875786 mm
+----------
+----Discussion----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 51.33618995473999 mm
+Protocol #2 Error (P-MPJPE): 37.108321229295015 mm
+Protocol #3 Error (N-MPJPE): 49.87576708340705 mm
+Velocity Error (MPJVE): 3.2770834452292927 mm
+----------
+----Eating----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 44.15405154970463 mm
+Protocol #2 Error (P-MPJPE): 33.9666603215913 mm
+Protocol #3 Error (N-MPJPE): 42.83537121113021 mm
+Velocity Error (MPJVE): 2.3778519149457615 mm
+----------
+----Greeting----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 49.44197539699158 mm
+Protocol #2 Error (P-MPJPE): 37.820461692040276 mm
+Protocol #3 Error (N-MPJPE): 48.25046041844474 mm
+Velocity Error (MPJVE): 3.6253424478903162 mm
+----------
+----Phoning----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 52.54471231881073 mm
+Protocol #2 Error (P-MPJPE): 37.13364360124487 mm
+Protocol #3 Error (N-MPJPE): 50.455426456343744 mm
+Velocity Error (MPJVE): 2.4110937077171366 mm
+----------
+----Photo----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 62.15470448952031 mm
+Protocol #2 Error (P-MPJPE): 43.142167455929695 mm
+Protocol #3 Error (N-MPJPE): 60.61026392857789 mm
+Velocity Error (MPJVE): 2.9159236401078097 mm
+----------
+----Posing----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 47.58437947899955 mm
+Protocol #2 Error (P-MPJPE): 35.32335805867818 mm
+Protocol #3 Error (N-MPJPE): 46.30266352900771 mm
+Velocity Error (MPJVE): 2.825748515965709 mm
+----------
+----Purchases----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 49.86565225282242 mm
+Protocol #2 Error (P-MPJPE): 33.92212874561493 mm
+Protocol #3 Error (N-MPJPE): 48.367634300297844 mm
+Velocity Error (MPJVE): 3.459516337528335 mm
+----------
+----Sitting----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 60.31157436937594 mm
+Protocol #2 Error (P-MPJPE): 44.229786204020066 mm
+Protocol #3 Error (N-MPJPE): 58.05408714478063 mm
+Velocity Error (MPJVE): 2.182591660787613 mm
+----------
+----SittingDown----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 64.8883384646958 mm
+Protocol #2 Error (P-MPJPE): 51.08754087944675 mm
+Protocol #3 Error (N-MPJPE): 63.261627497639125 mm
+Velocity Error (MPJVE): 3.057439242614394 mm
+----------
+----Smoking----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 50.56964290451177 mm
+Protocol #2 Error (P-MPJPE): 37.83756864489451 mm
+Protocol #3 Error (N-MPJPE): 48.65573911081618 mm
+Velocity Error (MPJVE): 2.4276244363442316 mm
+----------
+----Waiting----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 47.632241536804706 mm
+Protocol #2 Error (P-MPJPE): 34.93439086273898 mm
+Protocol #3 Error (N-MPJPE): 46.277741113700834 mm
+Velocity Error (MPJVE): 2.6064164271428054 mm
+----------
+----WalkDog----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 56.60120602102225 mm
+Protocol #2 Error (P-MPJPE): 39.307278667962514 mm
+Protocol #3 Error (N-MPJPE): 54.76166055616204 mm
+Velocity Error (MPJVE): 4.014863082920577 mm
+----------
+----Walking----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 33.82643398989457 mm
+Protocol #2 Error (P-MPJPE): 25.921494477813447 mm
+Protocol #3 Error (N-MPJPE): 32.42760130333851 mm
+Velocity Error (MPJVE): 3.2606749810128073 mm
+----------
+----WalkTogether----
+Test time augmentation: True
+Protocol #1 Error (MPJPE): 35.309601983061455 mm
+Protocol #2 Error (P-MPJPE): 27.706780609872805 mm
+Protocol #3 Error (N-MPJPE): 33.661489597052004 mm
+Velocity Error (MPJVE): 2.917687647908421 mm
+----------
+Protocol #1   (MPJPE) action-wise average: 50.2 mm
+Protocol #2 (P-MPJPE) action-wise average: 36.9 mm
+Protocol #3 (N-MPJPE) action-wise average: 48.5 mm
+Velocity      (MPJVE) action-wise average: 2.96 mm
