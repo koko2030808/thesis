@@ -89,29 +89,29 @@ def project_to_2d_linear(X, camera_params):
     
     return f*XX + c
 
-# def normalize_sequence_fixed_scale(X_seq, ref_frame_idx=0):
-#     """
-#     【新部署邏輯】序列固定基準歸一化
-#     X_seq shape: (num_frames, num_joints, 2)
-#     """
-#     assert X_seq.shape[-1] == 2
+def normalize_sequence_fixed_scale(X_seq, ref_frame_idx=0):
+    """
+    【新部署邏輯】序列固定基準歸一化
+    X_seq shape: (num_frames, num_joints, 2)
+    """
+    assert X_seq.shape[-1] == 2
     
-#     # 1. 取得基準影格（通常是第一幀站立姿態）計算縮放因子
-#     ref_frame = X_seq[ref_frame_idx]
-#     y_min_ref, y_max_ref = ref_frame[:, 1].min(), ref_frame[:, 1].max()
-#     ref_height = y_max_ref - y_min_ref
+    # 1. 取得基準影格（通常是第一幀站立姿態）計算縮放因子
+    ref_frame = X_seq[ref_frame_idx]
+    y_min_ref, y_max_ref = ref_frame[:, 1].min(), ref_frame[:, 1].max()
+    ref_height = y_max_ref - y_min_ref
     
-#     # 2. 定義統一的縮放比例（將基準高度縮放到 2.0）
-#     fixed_scale = 2.0 / (ref_height + 1e-6)
+    # 2. 定義統一的縮放比例（將基準高度縮放到 2.0）
+    fixed_scale = 2.0 / (ref_height + 1e-6)
     
-#     # 3. 對整段序列套用相同比例
-#     X_normalized = np.copy(X_seq)
-#     for f in range(X_seq.shape[0]):
-#         # 以每幀的 Hip (索引 0) 為中心平移，消除絕對座標位移
-#         root_x, root_y = X_seq[f, 0, 0], X_seq[f, 0, 1]
+    # 3. 對整段序列套用相同比例
+    X_normalized = np.copy(X_seq)
+    for f in range(X_seq.shape[0]):
+        # 以每幀的 Hip (索引 0) 為中心平移，消除絕對座標位移
+        root_x, root_y = X_seq[f, 0, 0], X_seq[f, 0, 1]
         
-#         # 套用固定比例，保留下蹲導致的高度變化
-#         X_normalized[f, :, 0] = (X_seq[f, :, 0] - root_x) * fixed_scale
-#         X_normalized[f, :, 1] = (X_seq[f, :, 1] - root_y) * fixed_scale
+        # 套用固定比例，保留下蹲導致的高度變化
+        X_normalized[f, :, 0] = (X_seq[f, :, 0] - root_x) * fixed_scale
+        X_normalized[f, :, 1] = (X_seq[f, :, 1] - root_y) * fixed_scale
         
-#     return X_normalized
+    return X_normalized
