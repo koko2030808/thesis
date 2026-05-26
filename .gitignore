@@ -3,4 +3,9 @@
 *.png
 *.jpg
 *.npz
+*.jpeg
+*.json
+*.txt
+*.exe
+*.pyc
 data/
