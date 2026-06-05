@@ -95,7 +95,7 @@ for subject in keypoints.keys():
             # Normalize camera frame
             cam = dataset.cameras()[subject][cam_idx]
             kps[..., :2] = normalize_screen_coordinates(kps[..., :2], w=cam['res_w'], h=cam['res_h'])
-            kps[..., :2] = normalize_sequence_fixed_scale(kps[..., :2])
+            #kps[..., :2] = normalize_sequence_fixed_scale(kps[..., :2])
             keypoints[subject][action][cam_idx] = kps
 
 subjects_train = args.subjects_train.split(',')
