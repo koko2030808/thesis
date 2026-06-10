@@ -97,7 +97,8 @@ for subject in keypoints.keys():
         for cam_idx, kps in enumerate(keypoints[subject][action]):
             cam = dataset.cameras()[subject][cam_idx]
             kps[..., :2] = normalize_screen_coordinates(kps[..., :2], w=cam['res_w'], h=cam['res_h'])
-            keypoints[subject][action][cam_idx] = kps
+            # 改成
+            keypoints[subject][action][cam_idx] = kps[..., :2]  # strip score channel
 
 # 載入模型
 filter_widths = [int(x) for x in args.architecture.split(',')]
@@ -225,5 +226,23 @@ if results[3]:
     print('  ' + '-'*52)
     for r in sorted(results[3], key=lambda x: x['cv'], reverse=True)[:5]:
         print(f"  {r['subject']:<8} {r['action']:<22} {r['mpjpe']:>10.2f} {r['cv']:>8.4f}")
+
+print('\n' + '='*72)
+print('  逐動作平均 MPJPE（跨所有 Camera）')
+print('='*72)
+action_data = {}
+for cam_idx in range(4):
+    for r in results[cam_idx]:
+        a = r['action']
+        if a not in action_data:
+            action_data[a] = {'mpjpe': [], 'cv': []}
+        action_data[a]['mpjpe'].append(r['mpjpe'])
+        action_data[a]['cv'].append(r['cv'])
+
+for action in sorted(action_data.keys()):
+    avg_mpjpe = np.mean(action_data[action]['mpjpe'])
+    avg_cv = np.mean(action_data[action]['cv'])
+    marker = ' ← 病灶' if 'Sitting' in action else ''
+    print(f'  {action:<28} {avg_mpjpe:>8.2f}mm  CV={avg_cv:.4f}{marker}')
 
 print('\n[✅] 評估完成。以上是論文第一層的 Baseline 數字。')

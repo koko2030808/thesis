@@ -8,7 +8,7 @@ import os
 SEQUENCE_ASSET_PATH = "/Game/RenderPeople/VideoPoseSyntheticModel/Ch01_nonPBR/Seq_Vaccine_01"
 OUTPUT_JSON_PATH    = r"D:\04.09\VideoPose3D\vaccine_data.json"
 FRAME_START         = 0
-FRAME_END           = 128   # 11 幀 (0~10)
+FRAME_END           =  6919  # 11 幀 (0~10)
 SEQUENCE_FPS        = 30
 
 # 已依據 UI 截圖完全對齊 17 個實體 Socket 名稱
