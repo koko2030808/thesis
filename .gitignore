@@ -1,11 +1,6 @@
-/checkpoint
+data/*.npz
+checkpoint/*.bin
+Renders/
+Detections/
 *.mp4
-*.png
-*.jpg
-*.npz
-*.jpeg
-*.json
-*.txt
-*.exe
-*.pyc
-data/
+RTMPose_NPY/
