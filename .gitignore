@@ -4,3 +4,15 @@ Renders/
 Detections/
 *.mp4
 RTMPose_NPY/
+/checkpoint
+*.mp4
+*.png
+*.jpg
+*.npz
+*.jpeg
+*.json
+*.txt
+*.exe
+*.pyc
+*.gif
+data/
